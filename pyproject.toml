@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bmatlaw-toolshape"
+version = "0.1.0"
+description = "按工具的模式检查调用参数的类型、必填项与取值范围，标出不合规调用"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "bmatlaw" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://bmatlaw.github.io"
+Repository = "https://github.com/bmatlaw/toolshape"
+Issues = "https://github.com/bmatlaw/toolshape/issues"
+
+[project.scripts]
+toolshape = "toolshape:main"
+
+[tool.setuptools]
+py-modules = ["toolshape"]
